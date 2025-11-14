@@ -1,13 +1,16 @@
-public class ClienteVip extends Cliente{
-    private String numeroCartao;
+public class ClienteVip extends Cliente {
+    private double numeroCartao;
 
-public ClienteVip(String nome, double valorDaCompra, String numeroCartao){
+    public ClienteVip(String nome, double valorDaCompra, double numeroCartao) {
         super(nome, valorDaCompra);
         this.numeroCartao = numeroCartao;
     }
 
-    @Override
-    public double calcularPagamento(){
-        return this.getValorDaCompra() * 90/100;
+    public String getNome() {
+        return super.getNome();
+    }
+
+    public double calcularPagamento() {
+        return this.getValorDaCompra() * 90 / 100;
     }
 }
