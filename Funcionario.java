@@ -1,41 +1,33 @@
-import java.util.Scanner;
-
 public class Funcionario {
-    private int codigo;
-    private String nome;
-    private String cpf;
-    private String endereco;
-    private String telefone;
-    private int idade;
-    private float salario;
+    private String nome_f;
+    private int CPF;
+    private String funcao;
 
-    public Funcionario(int codigo, String nome, String cpf, String endereco, String telefone, int idade, float salario) {
-        this.codigo = codigo;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.idade = idade;
-        this.salario = salario;
+public Funcionario(String nome_f, int CPF, String funcao){
+    this.nome_f = nome_f;
+    this.CPF = CPF;
+    this.funcao = funcao;
+}
+
+
+    public String getNome_f(){
+        return nome_f;
+    }
+    public void setNome_f(String nome_f){
+        this.nome_f = nome_f;
     }
 
-    // Getters e Setters
-    public void setSalario(float novoSalario) {
-        this.salario = novoSalario;
+    public int getCPF(){
+        return CPF;
     }
-
-    public float calculaSalarioLiquido() {
-        return salario * 0.89f; // desconto de 11%
+    public void setCPF(int CPF){
+        this.CPF = CPF;
     }
-
-    public void mostrarEstado() {
-        System.out.println("Código: " + codigo);
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF: " + cpf);
-        System.out.println("Endereço: " + endereco);
-        System.out.println("Telefone: " + telefone);
-        System.out.println("Idade: " + idade);
-        System.out.printf("Salário bruto: R$ %.2f\n", salario);
-        System.out.printf("Salário líquido: R$ %.2f\n", calculaSalarioLiquido());
+    
+    public String getFuncao(){
+        return funcao;
+    }
+    public void setFuncao(String funcao){
+        this.funcao = funcao;
     }
 }
